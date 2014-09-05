@@ -1,43 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout 
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:custom="http://schemas.android.com/apk/res/com.ray.custom.view.android"
-	
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.ray.custom.view.android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
-    <RelativeLayout android:gravity="center" 
-    	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content"
-    	android:layout_marginTop="20dp"
-    	android:layout_marginLeft="5dp"
-    	android:layout_marginRight="5dp">
-		<com.ray.custom.view.android.widget.TabButton 
-			android:id="@+id/btn_left"
-			android:layout_width="100dp" 
-		    android:layout_height="35dp" 
-		    android:layout_centerVertical="true"
-		    android:text="左"
-		    custom:normal_background="@drawable/btn_left"
-		    custom:selected_background="@drawable/btn_left_selected"/>
-		<com.ray.custom.view.android.widget.TabButton 
-			android:id="@+id/btn_center"
-			android:layout_width="100dp" 
-		    android:layout_height="35dp" 
-		    android:layout_centerVertical="true"
-		    android:layout_toRightOf="@id/btn_left"
-		    android:text="中"
-		    custom:normal_background="@drawable/btn_center"
-		    custom:selected_background="@drawable/btn_center_selected"/>
-		<com.ray.custom.view.android.widget.TabButton 
-			android:id="@+id/btn_right"
-			android:layout_width="100dp" 
-		    android:layout_height="35dp" 
-		    android:layout_centerVertical="true"
-		    android:layout_toRightOf="@id/btn_center"
-		    android:text="右"
-		    custom:normal_background="@drawable/btn_right"
-		    custom:selected_background="@drawable/btn_right_selected"/>
-    </RelativeLayout>
+    android:orientation="vertical" >
+
+    <com.ray.custom.view.android.widget.TabButtonGroup
+        android:id="@+id/tabGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <com.ray.custom.view.android.widget.TabButton
+            android:id="@+id/btn_left"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:text="左"
+            custom:normal_background="@drawable/btn_left"
+            custom:selected_background="@drawable/btn_left_selected" />
+
+        <com.ray.custom.view.android.widget.TabButton
+            android:id="@+id/btn_center"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:text="中"
+            custom:normal_background="@drawable/btn_center"
+            custom:selected_background="@drawable/btn_center_selected" />
+
+        <com.ray.custom.view.android.widget.TabButton
+            android:id="@+id/btn_right"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:text="右"
+            custom:normal_background="@drawable/btn_right"
+            custom:selected_background="@drawable/btn_right_selected" />
+    </com.ray.custom.view.android.widget.TabButtonGroup>
+
+    <Button
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Left" />
+
+    <Button
+        android:id="@+id/center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Center" />
+
+    <Button
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Right" />
+
 </LinearLayout>
